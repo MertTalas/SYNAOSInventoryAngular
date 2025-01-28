@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Inventory Items</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let item of items"
+        [ngClass]="{ selected: selectedItemId === item.id }"
+        (click)="selectItem(item)"
+      >
+        <div class="item-content">
+          <div class="item-info">
+            <span class="item-name">{{ item.itemName }}</span>
+            <span class="item-status">
+              Status: {{ item.fleetState | replace : "_" : " " }}
+            </span>
+          </div>
+          <div class="item-indicators">
+            <mat-chip-set>
+              <mat-chip
+                [style.background-color]="
+                  item.batteryChargePercentage > 20 ? '#4CAF50' : '#F44336'
+                "
+                selected
+              >
+                <mat-icon
+                  [style.color]="'white'"
+                  style="vertical-align: middle"
+                >
+                  {{
+                    item.batteryChargePercentage > 20
+                      ? "battery_full"
+                      : "battery_alert"
+                  }}
+                </mat-icon>
+                <span class="percentage-text">
+                  {{ item.batteryChargePercentage }}%
+                </span>
+              </mat-chip>
+              <mat-chip *ngIf="item.loaded" color="primary" selected>
+                <span class="percentage-text"> Loaded </span>
+              </mat-chip>
+            </mat-chip-set>
+          </div>
+        </div>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>

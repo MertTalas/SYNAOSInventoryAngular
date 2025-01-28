@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:root {
+  --primary-color: #fc3b53;
+  --primary-blue-color: #2196f3;
+  --primary-gray-color: #e0e0e0;
+}
+
+.mat-mdc-button,
+.mat-toolbar,
+.mat-mdc-raised-button {
+  &.mat-primary {
+    background-color: var(--primary-color);
+  }
+}
+
+.mat-mdc-card {
+  margin: 8px;
+}
+
+.mat-toolbar {
+  position: relative;
+  z-index: 1;
+}

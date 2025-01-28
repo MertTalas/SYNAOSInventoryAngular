@@ -1,0 +1,19 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.content-container {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .content-container {
+    grid-template-columns: 1fr;
+  }
+}

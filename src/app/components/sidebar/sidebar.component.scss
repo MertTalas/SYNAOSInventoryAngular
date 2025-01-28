@@ -1,0 +1,52 @@
+.detail-section {
+  margin: 16px 0;
+
+  h3 {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+}
+
+.position-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+
+  .label {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 12px;
+  }
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.no-selection {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.54);
+  padding: 16px;
+}
+
+mat-divider {
+  margin: 16px 0;
+}
+
+mat-chip {
+  &.mat-primary {
+    background-color: var(--primary-blue-color);
+  }
+  &.mat-secondary {
+    background-color: var(--primary-gray-color);
+  }
+}
+
+.percentage-text {
+  vertical-align: middle;
+  color: white;
+}

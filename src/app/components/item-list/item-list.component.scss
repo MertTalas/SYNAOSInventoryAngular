@@ -1,0 +1,43 @@
+.item-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .item-info {
+    display: flex;
+    flex-direction: column;
+
+    .item-name {
+      font-weight: 400;
+    }
+
+    .item-status {
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}
+
+.selected {
+  background-color: rgba(33, 150, 243, 0.12);
+}
+
+mat-list-item {
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(33, 150, 243, 0.12);
+  }
+}
+
+mat-chip {
+  &.mat-primary {
+    background-color: var(--primary-blue-color);
+  }
+}
+
+.percentage-text {
+  vertical-align: middle;
+  margin-left: 4px;
+  color: white;
+}
