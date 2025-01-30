@@ -35,7 +35,6 @@ export class ItemListComponent implements OnInit {
   ngOnInit(): void {
     this.items = this.inventoryService.getAllItems();
 
-    // URL'den item ID'sini al
     this.route.queryParams.subscribe((params) => {
       if (params['itemId']) {
         const item = this.inventoryService.getItemById(params['itemId']);
